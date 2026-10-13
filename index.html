@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fae8e8">
+<title>Elif & Taha | Bizim Hikâyemiz</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Georgia,'Times New Roman',serif;
+  background:#fff8f5;color:#593b43;
+}
+button{font:inherit;cursor:pointer}
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:28px 18px;
+  background:radial-gradient(ellipse at top,#fff 0%,#fce8e8 65%,#f7dada 100%);
+}
+.intro{max-width:520px;width:100%}
+.small{letter-spacing:4px;font-size:11px;text-transform:uppercase}
+h1{font-size:clamp(38px,10vw,64px);font-weight:normal;margin:18px 0}
+h2{font-size:30px;font-weight:normal}
+p{line-height:1.9}
+.envelope-button{
+  border:0;background:none;margin:28px auto;display:block;
+  color:#80515a;
+}
+.envelope{font-size:100px;display:block;transition:.4s}
+.envelope-button:hover .envelope{transform:scale(1.08) rotate(-4deg)}
+.hint{font-size:13px;letter-spacing:1px}
+section{padding:65px 20px;max-width:850px;margin:auto}
+.center{text-align:center}
+.script{font-style:italic;color:#a45f70}
+.letter{
+  display:none;background:#fffdf9;padding:28px 24px;
+  border:1px solid #edd5d4;border-radius:5px;
+  box-shadow:0 10px 35px #8e59631c;
+  text-align:left;animation:appear .8s ease;
+}
+.letter.show{display:block}
+@keyframes appear{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.primary{
+  border:0;border-radius:30px;padding:13px 23px;
+  color:white;background:#a96373;
+}
+.story{
+  border-left:2px solid #dfb2b9;
+  padding:5px 0 5px 22px;margin:32px 0;
+}
+.story-item{margin:0 0 30px;position:relative}
+.story-item:before{
+  content:"♥";position:absolute;left:-32px;top:0;
+  color:#bd7a89;background:#fff8f5;padding:3px;
+}
+.gallery{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;margin-top:25px;
+}
+.photo{
+  min-height:175px;background:#f6e5e3;border-radius:7px;
+  overflow:hidden;display:flex;align-items:center;
+  justify-content:center;text-align:center;
+}
+.photo img{width:100%;height:100%;min-height:175px;object-fit:cover}
+.photo span{padding:12px;font-size:13px}
+.music{
+  background:#f9e9e7;border-radius:12px;padding:24px;
+  text-align:center;margin-top:25px;
+}
+audio{width:100%;margin-top:15px}
+.note{
+  background:#fffdf9;border:1px solid #eed9d5;
+  padding:25px;border-radius:8px;text-align:left;
+}
+footer{text-align:center;padding:45px 15px;color:#a66e79}
+.heart{color:#b85f75}
+@media(min-width:600px){
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+  section{padding-top:85px;padding-bottom:85px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="intro">
+    <div class="small">Sana, en güzel hikâyeme</div>
+    <h1>Elif <span class="heart">&</span> Taha</h1>
+    <p>Bir hikâyemiz var…<br>
+    Ve ben en güzel sayfalarını seninle yazmak istiyorum.</p>
+
+    <button class="envelope-button" id="openEnvelope"
+      aria-label="Aşk mektubunu aç">
+      <span class="envelope" id="envelope">💌</span>
+      <span class="hint">SENİN İÇİN BİR MEKTUP VAR</span>
+    </button>
+
+    <div class="letter" id="letter">
+      <p class="script">Canım Elif'im,</p>
+      <p>
+        Bu küçük dünyayı senin için hazırladım.
+        İçinde fotoğraflarımız, hatıralarımız ve sana
+        söylemek istediğim ama bazen kelimelere
+        dökemediğim duygularım var.
+      </p>
+      <p>
+        İyi ki yollarımız yeniden kesişmiş.
+        İyi ki hikâyemizin devamını birlikte yazıyoruz.
+      </p>
+      <p class="script">Seni çok seviyorum. ❤️</p>
+      <button class="primary" id="goStory">Hikâyemize göz at ↓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="story">
+  <div class="center">
+    <div class="small">Birlikte yazdığımız hikâye</div>
+    <h2>Bizim küçük dünyamız</h2>
+    <p>Her hatıranın ayrı bir yeri, her anın ayrı bir güzelliği var.</p>
+  </div>
+
+  <div class="story">
+    <div class="story-item">
+      <h3>İlk sayfa — Ortaokul</h3>
+      <p>
+        Her şeyin başladığı zamanlar…
+        Belki o günlerde gelecekte ne yaşayacağımızı bilmiyorduk
+        ama şimdi geriye dönüp bakınca o günlerin ne kadar
+        kıymetli olduğunu daha iyi anlıyorum.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h3>Yeniden, biz</h3>
+      <p>
+        Hayat bizi farklı yollara götürse de yeniden aynı
+        hikâyenin içinde buluştuk. Arkadaşça çıktığımız
+        bir günün yeniden birbirimize dönüşmemizi sağlayacağını
+        kim bilebilirdi?
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h3>Yağmurlu bir gün 🍅</h3>
+      <p>
+        Parkta oturduğumuz, yağmurun altında domates yediğimiz
+        ve başını omzuma yasladığın o an…
+        Bazen en güzel mutluluklar, planlamadığımız
+        küçücük anların içinde saklı.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h3>Henüz yazılmamış sayfalar</h3>
+      <p>
+        Daha gideceğimiz yerler, birlikte güleceğimiz anlar,
+        yaşayacağımız güzellikler var. Bu hikâyenin en güzel
+        tarafı, henüz bitmemiş olması.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="center">
+    <div class="small">Biriktirdiğimiz güzellikler</div>
+    <h2>Anılarımız 📷</h2>
+    <p>Her fotoğraf, seninle yeniden yaşamak istediğim bir an.</p>
+  </div>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="fotos/foto1.jpg" alt="İlk anımız"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">📷 İlk anımız<br>Fotoğrafını ekle</span>
+    </div>
+    <div class="photo">
+      <img src="fotos/foto2.jpg" alt="Birlikte"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">❤️ Birlikte<br>Fotoğrafını ekle</span>
+    </div>
+    <div class="photo">
+      <img src="fotos/foto3.jpg" alt="Güzel bir gün"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">🌸 Güzel bir gün<br>Fotoğrafını ekle</span>
+    </div>
+    <div class="photo">
+      <img src="fotos/foto4.jpg" alt="Gülüşün"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">✨ Gülüşün<br>Fotoğrafını ekle</span>
+    </div>
+    <div class="photo">
+      <img src="fotos/foto5.jpg" alt="En sevdiğim an"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">💗 En sevdiğim an<br>Fotoğrafını ekle</span>
+    </div>
+    <div class="photo">
+      <img src="fotos/foto6.jpg" alt="Bizim hikâyemiz"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">♾️ Bizim hikâyemiz<br>Fotoğrafını ekle</span>
+    </div>
+  </div>
+</section>
+
+<section id="song">
+  <div class="center">
+    <div class="small">Bu şarkı bize ait</div>
+    <h2>Bir şarkı, bin hatıra 🎶</h2>
+    <p>Bu şarkı çalarken aklına ben geleyim istedim.</p>
+  </div>
+
+  <div class="music">
+    <div style="font-size:35px">🎵</div>
+    <h3>Bizim şarkımız</h3>
+    <p>Seninle anlam kazanan melodiler…</p>
+    <audio controls preload="none">
+      <source src="muzik.mp3" type="audio/mpeg">
+      Tarayıcın ses dosyasını desteklemiyor.
+    </audio>
+    <p style="font-size:12px">
+      Müzik başlamazsa kendi müzik dosyamızı eklememiz gerekiyor.
+    </p>
+  </div>
+</section>
+
+<section id="lastletter">
+  <div class="center">
+    <div class="small">Kalbimden sana</div>
+    <h2>Sana söylemek istediklerim</h2>
+  </div>
+
+  <div class="note">
+    <p class="script">Elif'im,</p>
+    <p>
+      Seninle geçirdiğim zamanların bende bıraktığı yeri
+      birkaç cümleye sığdırmak kolay değil.
+      Bazen birlikte gülmemiz, bazen yan yana oturmamız,
+      bazen de küçücük bir anımız bütün günümü güzelleştirmeye yetiyor.
+    </p>
+    <p>
+      Seninle daha nice anı biriktirmek, yıllar sonra
+      bugünleri hatırlayıp gülümsemek istiyorum.
+      Birlikte kurduğumuz hayallerin peşinden gitmek,
+      yeni yerler görmek ve hayatın güzel günlerini de
+      sıradan günlerini de seninle paylaşmak istiyorum.
+    </p>
+    <p>
+      Bu site belki küçük bir hediye ama içindeki her hatıra
+      benim için çok kıymetli.
+      İyi ki varsın, iyi ki hayatımdasın.
+    </p>
+    <p class="script">Seni seven, Taha. ❤️</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Elif & Taha</p>
+  <p>Bugün, yarın ve hatırlayacağımız bütün güzel günler için.</p>
+  <div style="font-size:24px">♡</div>
+</footer>
+
+<script>
+const envelope = document.getElementById('envelope');
+const letter = document.getElementById('letter');
+
+document.getElementById('openEnvelope').addEventListener('click', () => {
+  letter.classList.toggle('show');
+  envelope.textContent = letter.classList.contains('show') ? '💌' : '✉️';
+});
+
+document.getElementById('goStory').addEventListener('click', () => {
+  document.getElementById('story').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
