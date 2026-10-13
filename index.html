@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -13,34 +12,66 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Georgia,'Times New Roman',serif;
-  background:#fff8f5;color:#593b43;
+  background:#fff8f5;
+  color:#593b43;
 }
 button{font:inherit;cursor:pointer}
 .hero{
-  min-height:100vh;display:flex;align-items:center;
-  justify-content:center;text-align:center;padding:28px 18px;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:28px 18px;
   background:radial-gradient(ellipse at top,#fff 0%,#fce8e8 65%,#f7dada 100%);
 }
-.intro{max-width:520px;width:100%}
-.small{letter-spacing:4px;font-size:11px;text-transform:uppercase}
-h1{font-size:clamp(38px,10vw,64px);font-weight:normal;margin:18px 0}
+.intro{max-width:560px;width:100%}
+.small{
+  letter-spacing:4px;
+  font-size:11px;
+  text-transform:uppercase;
+  line-height:1.8;
+}
+h1{
+  font-size:clamp(38px,10vw,64px);
+  font-weight:normal;
+  margin:18px 0;
+}
 h2{font-size:30px;font-weight:normal}
+h3{font-weight:normal}
 p{line-height:1.9}
 .envelope-button{
-  border:0;background:none;margin:28px auto;display:block;
+  border:0;
+  background:none;
+  margin:28px auto;
+  display:block;
   color:#80515a;
 }
-.envelope{font-size:100px;display:block;transition:.4s}
-.envelope-button:hover .envelope{transform:scale(1.08) rotate(-4deg)}
+.envelope{
+  font-size:100px;
+  display:block;
+  transition:.4s;
+}
+.envelope-button:hover .envelope{
+  transform:scale(1.08) rotate(-4deg);
+}
 .hint{font-size:13px;letter-spacing:1px}
-section{padding:65px 20px;max-width:850px;margin:auto}
+section{
+  padding:65px 20px;
+  max-width:850px;
+  margin:auto;
+}
 .center{text-align:center}
 .script{font-style:italic;color:#a45f70}
 .letter{
-  display:none;background:#fffdf9;padding:28px 24px;
-  border:1px solid #edd5d4;border-radius:5px;
+  display:none;
+  background:#fffdf9;
+  padding:28px 24px;
+  border:1px solid #edd5d4;
+  border-radius:8px;
   box-shadow:0 10px 35px #8e59631c;
-  text-align:left;animation:appear .8s ease;
+  text-align:left;
+  animation:appear .8s ease;
 }
 .letter.show{display:block}
 @keyframes appear{
@@ -48,43 +79,96 @@ section{padding:65px 20px;max-width:850px;margin:auto}
   to{opacity:1;transform:translateY(0)}
 }
 .primary{
-  border:0;border-radius:30px;padding:13px 23px;
-  color:white;background:#a96373;
+  border:0;
+  border-radius:30px;
+  padding:13px 23px;
+  color:white;
+  background:#a96373;
+  transition:.2s;
+}
+.primary:hover{
+  background:#874c5c;
+  transform:translateY(-2px);
 }
 .story{
   border-left:2px solid #dfb2b9;
-  padding:5px 0 5px 22px;margin:32px 0;
+  padding:5px 0 5px 22px;
+  margin:32px 0;
 }
-.story-item{margin:0 0 30px;position:relative}
+.story-item{margin:0 0 35px;position:relative}
 .story-item:before{
-  content:"♥";position:absolute;left:-32px;top:0;
-  color:#bd7a89;background:#fff8f5;padding:3px;
+  content:"♥";
+  position:absolute;
+  left:-32px;
+  top:0;
+  color:#bd7a89;
+  background:#fff8f5;
+  padding:3px;
 }
 .gallery{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:25px;
 }
 .photo{
-  min-height:175px;background:#f6e5e3;border-radius:7px;
-  overflow:hidden;display:flex;align-items:center;
-  justify-content:center;text-align:center;
+  min-height:175px;
+  background:#f6e5e3;
+  border-radius:7px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
-.photo img{width:100%;height:100%;min-height:175px;object-fit:cover}
+.photo img{
+  width:100%;
+  height:100%;
+  min-height:175px;
+  object-fit:cover;
+  transition:transform .4s;
+}
+.photo:hover img{transform:scale(1.04)}
 .photo span{padding:12px;font-size:13px}
 .music{
-  background:#f9e9e7;border-radius:12px;padding:24px;
-  text-align:center;margin-top:25px;
+  background:#f9e9e7;
+  border-radius:12px;
+  padding:24px;
+  text-align:center;
+  margin-top:25px;
 }
 audio{width:100%;margin-top:15px}
 .note{
-  background:#fffdf9;border:1px solid #eed9d5;
-  padding:25px;border-radius:8px;text-align:left;
+  background:#fffdf9;
+  border:1px solid #eed9d5;
+  padding:25px;
+  border-radius:8px;
+  text-align:left;
+  box-shadow:0 8px 25px #8e59630d;
 }
-footer{text-align:center;padding:45px 15px;color:#a66e79}
+footer{
+  text-align:center;
+  padding:45px 15px;
+  color:#a66e79;
+}
 .heart{color:#b85f75}
+.divider{
+  text-align:center;
+  color:#c58b97;
+  letter-spacing:10px;
+  margin:30px 0;
+}
 @media(min-width:600px){
   .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
   section{padding-top:85px;padding-bottom:85px}
+  .letter,.note{padding:35px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation:none!important;
+    transition:none!important;
+  }
 }
 </style>
 </head>
@@ -95,121 +179,172 @@ footer{text-align:center;padding:45px 15px;color:#a66e79}
   <div class="intro">
     <div class="small">Sana, en güzel hikâyeme</div>
     <h1>Elif <span class="heart">&</span> Taha</h1>
-    <p>Bir hikâyemiz var…<br>
-    Ve ben en güzel sayfalarını seninle yazmak istiyorum.</p>
+
+    <p>
+      Bazı insanlar hayatına bir kez girer ama kalbinde hep kalır.<br>
+      Benim en güzel hikâyem sensin, Elif'im.
+    </p>
 
     <button class="envelope-button" id="openEnvelope"
-      aria-label="Aşk mektubunu aç">
+      aria-label="Aşk mektubunu aç" aria-expanded="false">
       <span class="envelope" id="envelope">💌</span>
       <span class="hint">SENİN İÇİN BİR MEKTUP VAR</span>
     </button>
 
     <div class="letter" id="letter">
-      <p class="script">Canım Elif'im,</p>
+      <p class="script">Elif'im, güzelim, ❤️</p>
+
       <p>
-        Bu küçük dünyayı senin için hazırladım.
-        İçinde fotoğraflarımız, hatıralarımız ve sana
-        söylemek istediğim ama bazen kelimelere
-        dökemediğim duygularım var.
+        Nereden başlasam bilmiyorum. Sana olan sevgimi anlatmak için
+        ne yazsam az kalacak gibi geliyor. O yüzden sana kocaman bir
+        şey hazırlamak istedim. İçinde bizden parçalar olsun,
+        baktığında yüzünde küçücük de olsa bir gülümseme oluşsun istedim.
       </p>
+
       <p>
-        İyi ki yollarımız yeniden kesişmiş.
-        İyi ki hikâyemizin devamını birlikte yazıyoruz.
+        Düşünsene güzelim, ortaokulda başlayan hikâyemiz bugün hâlâ
+        devam ediyor. Aradan ne kadar zaman geçerse geçsin, seninle
+        yeniden aynı hikâyenin içinde olmak benim için çok özel.
       </p>
-      <p class="script">Seni çok seviyorum. ❤️</p>
-      <button class="primary" id="goStory">Hikâyemize göz at ↓</button>
+
+      <p>
+        Daha yaşayacağımız çok şey var. Ben seninle daha çok gülmek,
+        daha çok anı biriktirmek ve yıllar sonra bugünleri hatırlayıp
+        birbirimize gülümsemek istiyorum.
+      </p>
+
+      <p class="script">İyi ki benim Elif'imsin. Seni çok seviyorum. ❤️</p>
+
+      <button class="primary" id="goStory">
+        Hikâyemize göz at ↓
+      </button>
     </div>
   </div>
 </header>
 
 <main>
+
 <section id="story">
   <div class="center">
     <div class="small">Birlikte yazdığımız hikâye</div>
     <h2>Bizim küçük dünyamız</h2>
-    <p>Her hatıranın ayrı bir yeri, her anın ayrı bir güzelliği var.</p>
+    <p>
+      Elif'im, bunlar bizim hikâyemizden birkaç sayfa.
+      Her birinin bende ayrı bir yeri var.
+    </p>
   </div>
 
   <div class="story">
+
     <div class="story-item">
-      <h3>İlk sayfa — Ortaokul</h3>
+      <h3>Her şeyin başladığı yer — Ortaokul</h3>
       <p>
-        Her şeyin başladığı zamanlar…
-        Belki o günlerde gelecekte ne yaşayacağımızı bilmiyorduk
-        ama şimdi geriye dönüp bakınca o günlerin ne kadar
-        kıymetli olduğunu daha iyi anlıyorum.
+        Bazen düşünüyorum da güzelim… Ortaokulda başlayan bu hikâyenin
+        bizi yıllar sonra yeniden aynı sınıfta buluşturacağını o gün
+        bilseydim ne hissederdim acaba? O zamanlar yaşadığımız küçücük
+        şeylerin bugün benim için bu kadar kıymetli olacağını bilmiyordum.
+        Şimdi dönüp bakınca, seninle ilgili anılarımın hepsinin kalbimde
+        ayrı bir yeri olduğunu görüyorum.
       </p>
     </div>
 
     <div class="story-item">
-      <h3>Yeniden, biz</h3>
+      <h3>Yollarımız yeniden birleşti ❤️</h3>
       <p>
-        Hayat bizi farklı yollara götürse de yeniden aynı
-        hikâyenin içinde buluştuk. Arkadaşça çıktığımız
-        bir günün yeniden birbirimize dönüşmemizi sağlayacağını
-        kim bilebilirdi?
+        Hayat bizi bir süre farklı yerlere götürdü ama hikâyemiz burada
+        bitmedi. Yeniden aynı sınıfta olmak, arkadaşça vakit geçirmek
+        ve sonra tekrar birbirimize dönmek… Güzelim, bugün geriye
+        baktığımda seninle yeniden bir araya gelmiş olmamıza çok seviniyorum.
+        Çünkü ben seninle daha anlatılacak çok hikâyemiz olsun istiyorum.
       </p>
     </div>
 
     <div class="story-item">
-      <h3>Yağmurlu bir gün 🍅</h3>
+      <h3>Yağmur, park ve domates 🍅</h3>
       <p>
-        Parkta oturduğumuz, yağmurun altında domates yediğimiz
-        ve başını omzuma yasladığın o an…
-        Bazen en güzel mutluluklar, planlamadığımız
-        küçücük anların içinde saklı.
+        Parkta oturduğumuz o günü unutamıyorum. Yağmur, domatesler
+        ve başını omzuma yaslaman… Belki dışarıdan bakınca sıradan
+        bir andı ama benim için çok güzeldi. Bazen insanın mutlu olmak
+        için hiçbir şeye ihtiyacı olmuyor; sevdiği insan yanında olsun
+        yetiyor. Benim için o an tam olarak öyleydi.
       </p>
     </div>
 
     <div class="story-item">
-      <h3>Henüz yazılmamış sayfalar</h3>
+      <h3>Birlikte biriktirdiğimiz anılar</h3>
       <p>
-        Daha gideceğimiz yerler, birlikte güleceğimiz anlar,
-        yaşayacağımız güzellikler var. Bu hikâyenin en güzel
-        tarafı, henüz bitmemiş olması.
+        Birlikte geçirdiğimiz zamanlar, güldüğümüz saçma şeyler,
+        oyunlar, gezmeler ve sadece yan yana olduğumuz anlar…
+        Hepsi bizim hikâyemizin bir parçası. Belki her anımızın
+        fotoğrafı yok ama bazı anılar insanın aklından hiç çıkmıyor.
+        Benim için seninle yaşadığım güzel şeylerin hepsi böyle.
       </p>
     </div>
+
+    <div class="story-item">
+      <h3>Bizim daha bitmeyen hikâyemiz ♾️</h3>
+      <p>
+        Daha birlikte oynayacağımız oyunlar, gideceğimiz yerler,
+        kahkahalarla güleceğimiz günler ve yıllar sonra anlatacağımız
+        anılar var. Seninle sıradan bir günü bile güzel bir anıya
+        dönüştürmek istiyorum. Bu sayfalar bizim geçmişimizden birkaç
+        parça; asıl güzel olan, birlikte yazacağımız devamı.
+      </p>
+    </div>
+
   </div>
 </section>
+
+<div class="divider">♡ ♡ ♡</div>
 
 <section id="photos">
   <div class="center">
     <div class="small">Biriktirdiğimiz güzellikler</div>
     <h2>Anılarımız 📷</h2>
-    <p>Her fotoğraf, seninle yeniden yaşamak istediğim bir an.</p>
+    <p>
+      Her fotoğraf, seninle yeniden yaşamak istediğim bir an.
+      Her birinde bizden bir parça var.
+    </p>
   </div>
 
   <div class="gallery">
+
     <div class="photo">
       <img src="fotos/foto1.jpg" alt="İlk anımız"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none">📷 İlk anımız<br>Fotoğrafını ekle</span>
     </div>
+
     <div class="photo">
       <img src="fotos/foto2.jpg" alt="Birlikte"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none">❤️ Birlikte<br>Fotoğrafını ekle</span>
     </div>
+
     <div class="photo">
       <img src="fotos/foto3.jpg" alt="Güzel bir gün"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none">🌸 Güzel bir gün<br>Fotoğrafını ekle</span>
     </div>
+
     <div class="photo">
       <img src="fotos/foto4.jpg" alt="Gülüşün"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none">✨ Gülüşün<br>Fotoğrafını ekle</span>
     </div>
+
     <div class="photo">
       <img src="fotos/foto5.jpg" alt="En sevdiğim an"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none">💗 En sevdiğim an<br>Fotoğrafını ekle</span>
     </div>
+
     <div class="photo">
       <img src="fotos/foto6.jpg" alt="Bizim hikâyemiz"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none">♾️ Bizim hikâyemiz<br>Fotoğrafını ekle</span>
     </div>
+
   </div>
 </section>
 
@@ -217,19 +352,24 @@ footer{text-align:center;padding:45px 15px;color:#a66e79}
   <div class="center">
     <div class="small">Bu şarkı bize ait</div>
     <h2>Bir şarkı, bin hatıra 🎶</h2>
-    <p>Bu şarkı çalarken aklına ben geleyim istedim.</p>
+    <p>
+      Bazen bir şarkı çalar ve insanın aklına tek bir kişi gelir.
+      Benim aklıma hep sen gel istedim.
+    </p>
   </div>
 
   <div class="music">
     <div style="font-size:35px">🎵</div>
     <h3>Bizim şarkımız</h3>
     <p>Seninle anlam kazanan melodiler…</p>
+
     <audio controls preload="none">
       <source src="muzik.mp3" type="audio/mpeg">
       Tarayıcın ses dosyasını desteklemiyor.
     </audio>
+
     <p style="font-size:12px">
-      Müzik başlamazsa kendi müzik dosyamızı eklememiz gerekiyor.
+      Şarkının çalması için muzik.mp3 dosyasını sitenin ana klasörüne ekle.
     </p>
   </div>
 </section>
@@ -238,51 +378,96 @@ footer{text-align:center;padding:45px 15px;color:#a66e79}
   <div class="center">
     <div class="small">Kalbimden sana</div>
     <h2>Sana söylemek istediklerim</h2>
+    <p>Bu bölüm sadece sana, Elif'im. ❤️</p>
   </div>
 
   <div class="note">
-    <p class="script">Elif'im,</p>
+    <p class="script">Elif'im, güzelim… ❤️</p>
+
     <p>
-      Seninle geçirdiğim zamanların bende bıraktığı yeri
-      birkaç cümleye sığdırmak kolay değil.
-      Bazen birlikte gülmemiz, bazen yan yana oturmamız,
-      bazen de küçücük bir anımız bütün günümü güzelleştirmeye yetiyor.
+      Sana bunları yazarken bile nereden başlayacağımı bilmiyorum.
+      Çünkü sen benim için birkaç cümleyle anlatabileceğim biri değilsin.
+      Sen benim geçmişimde yeri olan, bugünümü güzelleştiren ve
+      geleceğimi düşündüğümde hayallerimde yer alan insansın.
     </p>
+
     <p>
-      Seninle daha nice anı biriktirmek, yıllar sonra
-      bugünleri hatırlayıp gülümsemek istiyorum.
-      Birlikte kurduğumuz hayallerin peşinden gitmek,
-      yeni yerler görmek ve hayatın güzel günlerini de
-      sıradan günlerini de seninle paylaşmak istiyorum.
+      Seninle yaşadığımız şeyleri düşündüğümde aklıma sadece büyük
+      anlar gelmiyor. Bazen gizlice sarılmamız, birlikte ders çalışmamız,
+      bir yerlere gidip saçma sapan şeylere gülmemiz geliyor.
+      Bazen de o yağmurlu park günü gibi küçücük bir an…
+      Belki sen o anları benim kadar düşünmüyorsundur ama ben onları
+      hatırladıkça içim ısınıyor.
     </p>
+
     <p>
-      Bu site belki küçük bir hediye ama içindeki her hatıra
-      benim için çok kıymetli.
-      İyi ki varsın, iyi ki hayatımdasın.
+      Güzelim, ben seninle sadece güzel günler yaşamak istemiyorum.
+      Seninle hayatın içinden geçmek istiyorum. Birlikte yeni şeyler
+      öğrenmek, yeni yerler görmek, bazen hiçbir şey yapmadan yan yana
+      oturmak ve yıllar sonra dönüp baktığımızda “Ne güzel günlerimiz
+      olmuş” diyebilmek istiyorum.
     </p>
-    <p class="script">Seni seven, Taha. ❤️</p>
+
+    <p>
+      Belki her zaman içimden geçenleri düzgün anlatamıyorum.
+      Bazen seni ne kadar sevdiğimi göstermek istediğim hâlde
+      bunu istediğim gibi yapamıyorum. Ama şunu bilmeni istiyorum:
+      Sen benim için çok değerlisin. Senin gülüşün, sesin, yanımda
+      oluşun ve seninle paylaştığım küçücük bir anın bile benim için
+      ayrı bir anlamı var.
+    </p>
+
+    <p>
+      Bu siteyi sadece sana fotoğraflar göstermek için hazırlamadım.
+      Bir gün canın sıkıldığında, beni özlediğinde ya da sadece
+      gülümsemek istediğinde açıp bizim hikâyemize bakmanı istedim.
+      Her baktığında, seni seven birinin bu küçük dünyayı senin için
+      hazırladığını hatırla.
+    </p>
+
+    <p>
+      Daha yaşayacağımız çok şey var Elif'im. Ben seninle daha nice
+      güzel günler, nice kahkahalar ve nice anılar yaşamak istiyorum.
+      Birlikte kurduğumuz hayallerin peşinden gitmek ve yıllar sonra
+      bugünleri hatırlayıp yine birbirimize sarılmak istiyorum.
+    </p>
+
+    <p class="script">
+      İyi ki varsın güzelim. İyi ki hikâyemiz yeniden başlamış.
+      İyi ki benim Elif'imsin.
+    </p>
+
+    <p class="script">Seni çok seviyorum. ❤️</p>
+    <p class="script">Her zaman seni seven, Taha.</p>
   </div>
 </section>
+
 </main>
 
 <footer>
-  <p>Elif & Taha</p>
+  <p>Elif <span class="heart">&</span> Taha</p>
   <p>Bugün, yarın ve hatırlayacağımız bütün güzel günler için.</p>
   <div style="font-size:24px">♡</div>
+  <p style="font-size:12px">Senin için, kalbimden. ❤️</p>
 </footer>
 
 <script>
 const envelope = document.getElementById('envelope');
 const letter = document.getElementById('letter');
+const openEnvelope = document.getElementById('openEnvelope');
 
-document.getElementById('openEnvelope').addEventListener('click', () => {
-  letter.classList.toggle('show');
-  envelope.textContent = letter.classList.contains('show') ? '💌' : '✉️';
+openEnvelope.addEventListener('click', () => {
+  const isOpen = letter.classList.toggle('show');
+  envelope.textContent = isOpen ? '💌' : '✉️';
+  openEnvelope.setAttribute('aria-expanded', String(isOpen));
 });
 
 document.getElementById('goStory').addEventListener('click', () => {
-  document.getElementById('story').scrollIntoView({behavior:'smooth'});
+  document.getElementById('story').scrollIntoView({
+    behavior: 'smooth'
+  });
 });
 </script>
+
 </body>
 </html>
